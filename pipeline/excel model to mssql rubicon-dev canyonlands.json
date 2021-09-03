@@ -40,7 +40,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "src_blob_chianti_excel",
+						"referenceName": "src_blob_coursedatalake_excel",
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": {
@@ -63,8 +63,14 @@
 						"referenceName": "dest_rubicon_dev_canyonlands",
 						"type": "DatasetReference",
 						"parameters": {
-							"SchemaName": "dbo",
-							"TableName": "test"
+							"SchemaName": {
+								"value": "@pipeline().parameters.SchemaName",
+								"type": "Expression"
+							},
+							"TableName": {
+								"value": "@pipeline().parameters.TableName",
+								"type": "Expression"
+							}
 						}
 					}
 				]
