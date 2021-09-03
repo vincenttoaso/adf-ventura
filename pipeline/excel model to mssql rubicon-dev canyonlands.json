@@ -50,6 +50,10 @@
 							"SheetName": {
 								"value": "@pipeline().parameters.SheetName",
 								"type": "Expression"
+							},
+							"Container": {
+								"value": "@pipeline().parameters.ContainerName",
+								"type": "Expression"
 							}
 						}
 					}
@@ -77,6 +81,9 @@
 				"type": "string"
 			},
 			"TableName": {
+				"type": "string"
+			},
+			"ContainerName": {
 				"type": "string"
 			}
 		},
