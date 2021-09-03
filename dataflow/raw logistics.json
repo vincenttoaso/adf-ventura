@@ -1,0 +1,9 @@
+{
+	"name": "raw logistics",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": []
+		}
+	}
+}
