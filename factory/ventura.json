@@ -1,0 +1,9 @@
+{
+	"name": "ventura",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9918aad5-495e-4cd9-8420-0e35b065de0a",
+		"tenantId": "43f6a96a-bc58-4cb7-a5d9-dd5c09e7ad2a"
+	}
+}

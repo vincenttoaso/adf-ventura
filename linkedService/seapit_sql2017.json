@@ -1,0 +1,17 @@
+{
+	"name": "seapit_sql2017",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=192.168.0.102;initial catalog=canyonlands",
+			"userName": "vtoas",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwNGVjZTYzZC0zNGE5LTQ5ZjUtYTZmZi1hN2E1OTlmYzJkZjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "seapit",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
