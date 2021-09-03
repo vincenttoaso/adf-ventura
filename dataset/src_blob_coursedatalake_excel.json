@@ -11,9 +11,6 @@
 			},
 			"SheetName": {
 				"type": "string"
-			},
-			"Container": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -27,10 +24,6 @@
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
 					"value": "@dataset().FileName",
-					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().Container",
 					"type": "Expression"
 				},
 				"container": "raw-load"
