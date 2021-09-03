@@ -40,7 +40,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "src_blob_excel_rpt_emulate",
+						"referenceName": "src_blob_chianti_excel",
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": {

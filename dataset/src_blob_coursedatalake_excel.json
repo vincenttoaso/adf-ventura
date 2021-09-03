@@ -1,8 +1,8 @@
 {
-	"name": "src_blob_chianti_excel",
+	"name": "src_blob_coursedatalake_excel",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "chianti",
+			"referenceName": "coursedatalake",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
