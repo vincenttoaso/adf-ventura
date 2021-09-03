@@ -90,7 +90,8 @@
 				"type": "string"
 			},
 			"ContainerName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "raw-load"
 			}
 		},
 		"annotations": [],
