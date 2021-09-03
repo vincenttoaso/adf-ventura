@@ -1,17 +1,9 @@
 {
-	"name": "dest_rubicon_dev_canyonlands",
+	"name": "canyonlands_test_logistics",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "optum_azure_rubicon_dev_canyonlands",
 			"type": "LinkedServiceReference"
-		},
-		"parameters": {
-			"SchemaName": {
-				"type": "string"
-			},
-			"TableName": {
-				"type": "string"
-			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
@@ -530,15 +522,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": {
-				"value": "@dataset().SchemaName",
-				"type": "Expression"
-			},
-			"table": {
-				"value": "@dataset().TableName",
-				"type": "Expression"
-			}
+			"schema": "raw",
+			"table": "logistics"
 		}
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
