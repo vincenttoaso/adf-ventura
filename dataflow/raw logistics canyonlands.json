@@ -1,0 +1,19 @@
+{
+	"name": "raw logistics canyonlands",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "canyonlands_test_logistics",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~>  canyonlands_test_logistics",
+					"dataset": {
+						"referenceName": "test_canyonlands_logistics",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared canyonlands_test_logistics = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  InputTable = AdfDoc{[Schema = \"raw\", Item = \"logistics\"]}[Data]\r\nin\r\n  InputTable;\r\nshared UserQuery = let\r\n  Source = canyonlands_test_logistics,\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"Origin ETD\", type datetime}, {\"Unrecognised Revenue\", Int64.Type}})\r\nin\r\n  #\"Changed column type\";\r\n"
+		}
+	}
+}

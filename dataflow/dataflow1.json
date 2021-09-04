@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "canyonlands_test_logistics",
+						"referenceName": "test_canyonlands_logistics",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
