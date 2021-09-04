@@ -1,0 +1,121 @@
+{
+	"name": "AzureSqlTable1_test",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "optum_azure_rubicon_dev_canyonlands",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Shipment ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Trans",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Origin ETD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination ETA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Weight (kg)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Volume (m3)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Inner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ_3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Outer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ_4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Added",
+				"type": "date"
+			},
+			{
+				"name": "Consignor City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor Postcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee Postcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consol ATD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consol ATA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Revenue Recognition Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Direction",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Overseas Agent Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Overseas Agent Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "House Bill Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Origin Location",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination Location",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "raw",
+			"table": "test"
+		}
+	}
+}
