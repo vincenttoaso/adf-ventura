@@ -60,11 +60,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"DestSchemaName": {
-								"value": "@pipeline().parameters.SchemaName",
+								"value": "@pipeline().parameters.DestSchemaName",
 								"type": "Expression"
 							},
 							"DestTableName": {
-								"value": "@pipeline().parameters.TableName",
+								"value": "@pipeline().parameters.DestTableName",
 								"type": "Expression"
 							}
 						}
@@ -75,16 +75,16 @@
 		"parameters": {
 			"FileName": {
 				"type": "string",
-				"defaultValue": "superstore.xlsx"
+				"defaultValue": "stg_logistics.xlsx"
 			},
 			"SheetName": {
-				"type": "string",
-				"defaultValue": "train"
-			},
-			"SchemaName": {
 				"type": "string"
 			},
-			"TableName": {
+			"DestSchemaName": {
+				"type": "string",
+				"defaultValue": "raw"
+			},
+			"DestTableName": {
 				"type": "string"
 			}
 		},
