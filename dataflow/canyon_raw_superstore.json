@@ -1,5 +1,5 @@
 {
-	"name": "canyon_raw_superset",
+	"name": "canyon_raw_superstore",
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
