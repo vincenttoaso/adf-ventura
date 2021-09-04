@@ -59,11 +59,11 @@
 						"referenceName": "dest_rubicon_dev_canyonlands",
 						"type": "DatasetReference",
 						"parameters": {
-							"SchemaName": {
+							"DestSchemaName": {
 								"value": "@pipeline().parameters.SchemaName",
 								"type": "Expression"
 							},
-							"TableName": {
+							"DestTableName": {
 								"value": "@pipeline().parameters.TableName",
 								"type": "Expression"
 							}
@@ -74,10 +74,12 @@
 		],
 		"parameters": {
 			"FileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "superstore.xlsx"
 			},
 			"SheetName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "train"
 			},
 			"SchemaName": {
 				"type": "string"

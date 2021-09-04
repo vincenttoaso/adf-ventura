@@ -6,15 +6,12 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"SchemaName": {
+			"DestSchemaName": {
 				"type": "string"
 			},
-			"TableName": {
+			"DestTableName": {
 				"type": "string"
 			}
-		},
-		"folder": {
-			"name": "pipeline src and dest"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
