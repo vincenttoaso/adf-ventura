@@ -13,7 +13,7 @@
 					}
 				}
 			],
-			"script": "section Section1;\r\nshared canyonlands_test_logistics = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  InputTable = AdfDoc{[Schema = \"raw\", Item = \"logistics\"]}[Data]\r\nin\r\n  InputTable;\r\nshared UserQuery = let\r\n  Source = canyonlands_test_logistics,\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"Origin ETD\", type datetime}, {\"Unrecognised Revenue\", Int64.Type}})\r\nin\r\n  #\"Changed column type\";\r\n"
+			"script": "section Section1;\r\nshared pq_import_logistics = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  InputTable = AdfDoc{[Schema = \"raw\", Item = \"logistics\"]}[Data]\r\nin\r\n  InputTable;\r\nshared canyonlands_test_logistics = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  InputTable = AdfDoc{[Schema = \"raw\", Item = \"logistics\"]}[Data]\r\nin\r\n  InputTable;\r\nshared UserQuery = let\r\n  Source = canyonlands_test_logistics,\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"Origin ETD\", type datetime}, {\"Unrecognised Revenue\", Int64.Type}})\r\nin\r\n  #\"Changed column type\";\r\n"
 		}
 	}
 }
