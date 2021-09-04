@@ -1,12 +1,12 @@
 {
-	"name": "raw logistics canyonlands",
+	"name": "canyon_raw logistics",
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
 					"name": "canyonlands_test_logistics",
-					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~>  canyonlands_test_logistics",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> canyonlands_test_logistics",
 					"dataset": {
 						"referenceName": "canyonlands_test_logistics",
 						"type": "DatasetReference"
