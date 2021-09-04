@@ -531,11 +531,11 @@
 		],
 		"typeProperties": {
 			"schema": {
-				"value": "@dataset().SchemaName",
+				"value": "@dataset().DestSchemaName",
 				"type": "Expression"
 			},
 			"table": {
-				"value": "@dataset().TableName",
+				"value": "@dataset().DestTableName",
 				"type": "Expression"
 			}
 		}

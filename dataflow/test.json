@@ -1,0 +1,9 @@
+{
+	"name": "test",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": []
+		}
+	}
+}
