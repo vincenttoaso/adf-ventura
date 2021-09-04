@@ -20,14 +20,8 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"src_rubicon_dev_canyonlands": {
-								"SrcSchemaName": {
-									"value": "@pipeline().parameters.SrcSchemaName",
-									"type": "Expression"
-								},
-								"SrcTableName": {
-									"value": "@pipeline().parameters.SrcTablename",
-									"type": "Expression"
-								}
+								"SrcSchemaName": "raw",
+								"SrcTableName": "test"
 							},
 							"Sinkdest_rubicon_dev_canyonlands": {
 								"DestSchemaName": "dbo",
