@@ -16,6 +16,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "pipeline src and dest"
+		},
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
