@@ -1,0 +1,30 @@
+{
+	"name": "src_rubicon_dev_canyonlands",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "optum_azure_rubicon_dev_canyonlands",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SourceSchemaName": {
+				"type": "string"
+			},
+			"SourceTableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().SourceSchemaName",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().SourceTableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
