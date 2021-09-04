@@ -5,6 +5,9 @@
 			"referenceName": "optum_azure_rubicon_dev_canyonlands",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "power query ad-hoc"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
