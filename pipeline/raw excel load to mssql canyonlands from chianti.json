@@ -1,5 +1,5 @@
 {
-	"name": "load excel model to mssql",
+	"name": "raw excel load to mssql canyonlands from chianti",
 	"properties": {
 		"description": "dont forget to add .xlsx file extension\n",
 		"activities": [

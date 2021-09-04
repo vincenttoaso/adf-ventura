@@ -1,5 +1,5 @@
 {
-	"name": "excel model to mssql rubicon-dev canyonlands",
+	"name": "1 raw excel load to mssql canyonlands from coursedatalake",
 	"properties": {
 		"description": "dont forget to add .xlsx file extension\n",
 		"activities": [

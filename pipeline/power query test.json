@@ -15,20 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "power query test",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"src_rubicon_dev_canyonlands": {
-								"SrcSchemaName": "raw",
-								"SrcTableName": "test"
-							},
-							"Sinkdest_rubicon_dev_canyonlands": {
-								"DestSchemaName": "dbo",
-								"DestTableName": "test"
-							}
-						}
-					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
