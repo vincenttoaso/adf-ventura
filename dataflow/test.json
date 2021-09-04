@@ -3,7 +3,8 @@
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
-			"sources": []
+			"sources": [],
+			"script": "section Section1;\r\nshared src_blob_csv_rpt_emulate = let\r\n  AdfDoc = AzureStorage.BlobContents(\"https://chianti.blob.core.windows.net/report-emulate/train.csv\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \"\u0001\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]),\r\n  PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true])\r\nin\r\n  PromotedHeaders;\r\nshared UserQuery = let\r\n  Source = src_blob_csv_rpt_emulate\r\nin\r\n  Source;\r\n"
 		}
 	}
 }

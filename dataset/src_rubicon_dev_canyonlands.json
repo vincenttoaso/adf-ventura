@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"SourceSchemaName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "raw"
 			},
 			"SourceTableName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "logistics_test"
 			}
 		},
 		"annotations": [],
