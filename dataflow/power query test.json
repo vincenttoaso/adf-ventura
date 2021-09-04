@@ -1,0 +1,19 @@
+{
+	"name": "power query test",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "src_rubicon_dev_canyonlands",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~>  src_rubicon_dev_canyonlands",
+					"dataset": {
+						"referenceName": "src_rubicon_dev_canyonlands",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared src_rubicon_dev_canyonlands = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  Navigation = AdfDoc{[Schema = \"raw\", Item = \"test\"]}[Data],\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Navigation, {{\"Origin ETD\", type date}, {\"Destination ETA\", type date}, {\"Inner\", Int64.Type}, {\"Volume (m3)\", Int64.Type}, {\"Added\", type date}})\r\nin\r\n  #\"Changed column type\";\r\nshared UserQuery = let\r\n  Source = src_rubicon_dev_canyonlands\r\nin\r\n  Source;\r\n"
+		}
+	}
+}
