@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"SrcSchemaName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "raw"
 			},
 			"SrcTableName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "test"
 			}
 		},
 		"annotations": [],

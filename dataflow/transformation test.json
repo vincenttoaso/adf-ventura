@@ -1,0 +1,20 @@
+{
+	"name": "transformation test",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "src_rubicon_dev_canyonlands",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "parameters{\n\tSrcSchemaName as string,\n\tSrcTableName as string\n}\nsource(output(\n\t\t{Shipment ID} as string,\n\t\tTrans as string,\n\t\t{Origin ETD} as string,\n\t\t{Destination ETA} as string,\n\t\t{Weight (kg)} as string,\n\t\t{Volume (m3)} as string,\n\t\tInner as string,\n\t\tUQ_3 as string,\n\t\tOuter as string,\n\t\tUQ_4 as string,\n\t\tAdded as string,\n\t\t{Consignor City} as string,\n\t\t{Consignor State} as string,\n\t\t{Consignor Postcode} as string,\n\t\t{Consignee City} as string,\n\t\t{Consignee State} as string,\n\t\t{Consignee Postcode} as string,\n\t\t{Consol ATD} as string,\n\t\t{Consol ATA} as string,\n\t\t{Job Revenue Recognition Date} as string,\n\t\tDirection as string,\n\t\t{Overseas Agent Code} as string,\n\t\t{Overseas Agent Name} as string,\n\t\t{House Bill Type} as string,\n\t\t{Origin Location} as string,\n\t\t{Destination Location} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1"
+		}
+	}
+}
