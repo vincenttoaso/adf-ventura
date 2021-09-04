@@ -8,7 +8,7 @@
 					"name": "canyonlands_test_logistics",
 					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> canyonlands_test_logistics",
 					"dataset": {
-						"referenceName": "canyonlands_test_logistics",
+						"referenceName": "pq_import_logistics",
 						"type": "DatasetReference"
 					}
 				}

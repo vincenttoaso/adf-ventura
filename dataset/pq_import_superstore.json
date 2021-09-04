@@ -1,32 +1,16 @@
 {
-	"name": "powerquery_canyonlands_all",
+	"name": "pq_import_superstore",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "optum_azure_rubicon_dev_canyonlands",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"schema": {
-				"type": "string",
-				"defaultValue": "raw"
-			},
-			"table": {
-				"type": "string",
-				"defaultValue": "tablename"
-			}
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": {
-				"value": "@dataset().schema",
-				"type": "Expression"
-			},
-			"table": {
-				"value": "@dataset().table",
-				"type": "Expression"
-			}
+			"schema": "raw",
+			"table": "superstore"
 		}
 	}
 }

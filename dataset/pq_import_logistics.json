@@ -1,5 +1,5 @@
 {
-	"name": "canyonlands_test_logistics",
+	"name": "pq_import_logistics",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "optum_azure_rubicon_dev_canyonlands",
