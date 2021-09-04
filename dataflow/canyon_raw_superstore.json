@@ -1,0 +1,10 @@
+{
+	"name": "canyon_raw_superstore",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [],
+			"script": "section Section1;\r\nshared canyonlands_test_logistics = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  InputTable = AdfDoc{[Schema = \"raw\", Item = \"logistics\"]}[Data]\r\nin\r\n  InputTable;\r\nshared UserQuery = let\r\n  Source = canyonlands_test_logistics\r\nin\r\n  Source;\r\n"
+		}
+	}
+}
