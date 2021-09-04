@@ -1,0 +1,318 @@
+{
+	"name": "import_excel_from_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "coursedatalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "shipment",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "stg_logistics.xlsx",
+				"container": "raw-load"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Shipment ID",
+				"type": "String"
+			},
+			{
+				"name": "Trans",
+				"type": "String"
+			},
+			{
+				"name": "Mode",
+				"type": "String"
+			},
+			{
+				"name": "Origin",
+				"type": "String"
+			},
+			{
+				"name": "Origin Ctry",
+				"type": "String"
+			},
+			{
+				"name": "Destination",
+				"type": "String"
+			},
+			{
+				"name": "Destination Country",
+				"type": "String"
+			},
+			{
+				"name": "Consignor Code",
+				"type": "String"
+			},
+			{
+				"name": "Consignor Name",
+				"type": "String"
+			},
+			{
+				"name": "Consignee Code",
+				"type": "String"
+			},
+			{
+				"name": "Consignee Name",
+				"type": "String"
+			},
+			{
+				"name": "House Ref",
+				"type": "String"
+			},
+			{
+				"name": "Incoterm",
+				"type": "String"
+			},
+			{
+				"name": "PPD/CCX",
+				"type": "String"
+			},
+			{
+				"name": "Goods Description",
+				"type": "String"
+			},
+			{
+				"name": "Origin ETD",
+				"type": "String"
+			},
+			{
+				"name": "Destination ETA",
+				"type": "String"
+			},
+			{
+				"name": "Weight (kg)",
+				"type": "String"
+			},
+			{
+				"name": "Volume (m3)",
+				"type": "String"
+			},
+			{
+				"name": "Inner",
+				"type": "String"
+			},
+			{
+				"name": "UQ_3",
+				"type": "String"
+			},
+			{
+				"name": "Outer",
+				"type": "String"
+			},
+			{
+				"name": "UQ_4",
+				"type": "String"
+			},
+			{
+				"name": "Added",
+				"type": "String"
+			},
+			{
+				"name": "Transport Job",
+				"type": "String"
+			},
+			{
+				"name": "Brokerage Job",
+				"type": "String"
+			},
+			{
+				"name": "Is Master/ Lead",
+				"type": "String"
+			},
+			{
+				"name": "Import Broker Code",
+				"type": "String"
+			},
+			{
+				"name": "Import Broker Name",
+				"type": "String"
+			},
+			{
+				"name": "Export Broker Code",
+				"type": "String"
+			},
+			{
+				"name": "Export Broker Name",
+				"type": "String"
+			},
+			{
+				"name": "Job Branch",
+				"type": "String"
+			},
+			{
+				"name": "Job Dept",
+				"type": "String"
+			},
+			{
+				"name": "Local Client Code",
+				"type": "String"
+			},
+			{
+				"name": "Local Client Name",
+				"type": "String"
+			},
+			{
+				"name": "Job Sales Rep",
+				"type": "String"
+			},
+			{
+				"name": "Job Operator",
+				"type": "String"
+			},
+			{
+				"name": "Job Status",
+				"type": "String"
+			},
+			{
+				"name": "Job Opened",
+				"type": "String"
+			},
+			{
+				"name": "Job Profit",
+				"type": "String"
+			},
+			{
+				"name": "Consol ID",
+				"type": "String"
+			},
+			{
+				"name": "First Load",
+				"type": "String"
+			},
+			{
+				"name": "Last Discharge",
+				"type": "String"
+			},
+			{
+				"name": "ETD First Load",
+				"type": "String"
+			},
+			{
+				"name": "ETA Last Discharge",
+				"type": "String"
+			},
+			{
+				"name": "Master BL",
+				"type": "String"
+			},
+			{
+				"name": "Vessel",
+				"type": "String"
+			},
+			{
+				"name": "Flight/Voyage",
+				"type": "String"
+			},
+			{
+				"name": "Load",
+				"type": "String"
+			},
+			{
+				"name": "Discharge",
+				"type": "String"
+			},
+			{
+				"name": "ETD Load",
+				"type": "String"
+			},
+			{
+				"name": "ETA Discharge",
+				"type": "String"
+			},
+			{
+				"name": "Sending Agent Code",
+				"type": "String"
+			},
+			{
+				"name": "Sending Agent Name",
+				"type": "String"
+			},
+			{
+				"name": "Receiving Agent",
+				"type": "String"
+			},
+			{
+				"name": "Receiving Agent Name",
+				"type": "String"
+			},
+			{
+				"name": "Carrier Code",
+				"type": "String"
+			},
+			{
+				"name": "Carrier Name",
+				"type": "String"
+			},
+			{
+				"name": "Actual Cartage Delivery",
+				"type": "String"
+			},
+			{
+				"name": "Consignor City",
+				"type": "String"
+			},
+			{
+				"name": "Consignor State",
+				"type": "String"
+			},
+			{
+				"name": "Consignor Postcode",
+				"type": "String"
+			},
+			{
+				"name": "Consignee City",
+				"type": "String"
+			},
+			{
+				"name": "Consignee State",
+				"type": "String"
+			},
+			{
+				"name": "Consignee Postcode",
+				"type": "String"
+			},
+			{
+				"name": "Consol ATD",
+				"type": "String"
+			},
+			{
+				"name": "Consol ATA",
+				"type": "String"
+			},
+			{
+				"name": "Job Revenue Recognition Date",
+				"type": "String"
+			},
+			{
+				"name": "Direction",
+				"type": "String"
+			},
+			{
+				"name": "Overseas Agent Code",
+				"type": "String"
+			},
+			{
+				"name": "Overseas Agent Name",
+				"type": "String"
+			},
+			{
+				"name": "House Bill Type",
+				"type": "String"
+			},
+			{
+				"name": "Origin Location",
+				"type": "String"
+			},
+			{
+				"name": "Destination Location",
+				"type": "String"
+			}
+		]
+	}
+}
