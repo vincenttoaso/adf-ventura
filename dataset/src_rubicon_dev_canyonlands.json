@@ -123,11 +123,11 @@
 		],
 		"typeProperties": {
 			"schema": {
-				"value": "@dataset().SourceSchemaName",
+				"value": "@dataset().SrcSchemaName",
 				"type": "Expression"
 			},
 			"table": {
-				"value": "@dataset().SourceTableName",
+				"value": "@dataset().SrcTableName",
 				"type": "Expression"
 			}
 		}
