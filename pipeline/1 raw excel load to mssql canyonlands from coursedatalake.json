@@ -292,15 +292,13 @@
 		],
 		"parameters": {
 			"FileName": {
-				"type": "string",
-				"defaultValue": "stg_logistics.xlsx"
+				"type": "string"
 			},
 			"SheetName": {
 				"type": "string"
 			},
 			"DestSchemaName": {
-				"type": "string",
-				"defaultValue": "raw"
+				"type": "string"
 			},
 			"DestTableName": {
 				"type": "string"
