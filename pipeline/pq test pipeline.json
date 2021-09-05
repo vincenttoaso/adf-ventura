@@ -21,7 +21,7 @@
 						"datasetParameters": {
 							"src_rubicon_dev_canyonlands": {
 								"SrcSchemaName": "raw",
-								"SrcTableName": "logistics"
+								"SrcTableName": "transport"
 							},
 							"Sinkdest_rubicon_dev_canyonlands": {
 								"DestSchemaName": "dbo",
