@@ -476,6 +476,10 @@
 				"name": "Departure Status",
 				"type": "nvarchar"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "raw",
+			"table": "transport"
+		}
 	}
 }

@@ -1,5 +1,5 @@
 {
-	"name": "powerquery1",
+	"name": "pq test",
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
