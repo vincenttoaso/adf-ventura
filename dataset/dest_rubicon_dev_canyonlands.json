@@ -7,12 +7,10 @@
 		},
 		"parameters": {
 			"DestSchemaName": {
-				"type": "string",
-				"defaultValue": "dbo"
+				"type": "string"
 			},
 			"DestTableName": {
-				"type": "string",
-				"defaultValue": "test"
+				"type": "string"
 			}
 		},
 		"annotations": [],
