@@ -1,17 +1,31 @@
 {
-	"name": "import_excel_from_blob",
+	"name": "import_excel_from_blob_rawload",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "coursedatalake",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			},
+			"SheetName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "shipment",
+			"sheetName": {
+				"value": "@dataset().SheetName",
+				"type": "Expression"
+			},
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "stg_logistics.xlsx",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
 				"container": "raw-load"
 			},
 			"firstRowAsHeader": true
