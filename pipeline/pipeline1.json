@@ -1,0 +1,55 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "powerquery1",
+				"type": "ExecuteWranglingDataflow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "powerquery1",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"src_rubicon_dev_canyonlands": {
+								"SrcSchemaName": "raw",
+								"SrcTableName": "logistics"
+							},
+							"Sinkdest_rubicon_dev_canyonlands": {
+								"DestSchemaName": "dbo",
+								"DestTableName": "logistics"
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"sinks": {
+						"UserQuery": {
+							"name": "Sinkdest_rubicon_dev_canyonlands",
+							"dataset": {
+								"referenceName": "dest_rubicon_dev_canyonlands",
+								"type": "DatasetReference",
+								"parameters": {
+									"DestSchemaName": "dbo",
+									"DestTableName": "logistics"
+								}
+							},
+							"script": "sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\t{Shipment ID} as string,\n\t\tTrans as string,\n\t\t{Customs Info} as string,\n\t\tMode as string,\n\t\tOrigin as string,\n\t\t{Origin Ctry} as string,\n\t\tDestination as string,\n\t\t{Destination Country} as string,\n\t\t{Consignor Code} as string,\n\t\t{Consignor Name} as string,\n\t\t{Consignee Code} as string,\n\t\t{Consignee Name} as string,\n\t\t{House Ref} as string,\n\t\tIncoterm as string,\n\t\t{Additional Terms} as string,\n\t\t{PPD/CCX} as string,\n\t\t{Goods Description} as string,\n\t\t{Origin ETD} as string,\n\t\t{Destination ETA} as string,\n\t\tWeight as string,\n\t\tUQ as string,\n\t\tVolume as string,\n\t\tUQ2 as string,\n\t\t{Loading Metres} as string,\n\t\tChargeable as string,\n\t\tUQ3 as string,\n\t\tInner as string,\n\t\tUQ4 as string,\n\t\tOuter as string,\n\t\tUQ5 as string,\n\t\tAdded as string,\n\t\t{Controlling Customer Code} as string,\n\t\t{Controlling Customer Name} as string,\n\t\t{Controlling Agent Code} as string,\n\t\t{Controlling Agent Name} as string,\n\t\t{Transport Job} as string,\n\t\t{Brokerage Job} as string,\n\t\t{Is Master/ Lead} as string,\n\t\t{Master/ Lead Ref} as string,\n\t\t{Import Broker Code} as string,\n\t\t{Import Broker Name} as string,\n\t\t{Export Broker Code} as string,\n\t\t{Export Broker Name} as string,\n\t\t{Job Branch} as string,\n\t\t{Job Dept} as string,\n\t\t{Local Client Code} as string,\n\t\t{Local Client Name} as string,\n\t\t{Job Sales Rep} as string,\n\t\t{Job Operator} as string,\n\t\t{Job Status} as string,\n\t\t{Job Opened} as string,\n\t\t{Recognised Revenue} as string,\n\t\t{Recognised WIP} as string,\n\t\t{Total Recognised Income (REV+WIP)} as string,\n\t\t{Recognised Cost} as string,\n\t\t{Recognised Accrual} as string,\n\t\t{Total Recognised Expense (CST+ACR)} as string,\n\t\t{Job Profit} as string,\n\t\t{Consol ID} as string,\n\t\t{First Load} as string,\n\t\t{Last Discharge} as string,\n\t\t{ETD First Load} as string,\n\t\t{ETA Last Discharge} as string,\n\t\t{Master BL} as string,\n\t\tVessel as string,\n\t\t{Flight/Voyage} as string,\n\t\tLoad as string,\n\t\tDischarge as string,\n\t\t{ETD Load} as string,\n\t\t{ETA Discharge} as string,\n\t\t{Sending Agent Code} as string,\n\t\t{Sending Agent Name} as string,\n\t\t{Receiving Agent} as string,\n\t\t{Receiving Agent Name} as string,\n\t\t{Co-loaded With} as string,\n\t\t{Co-loader Name} as string,\n\t\t{Carrier Code} as string,\n\t\t{Carrier Name} as string,\n\t\tTEU as string,\n\t\t{Container Count} as string,\n\t\tOther as string,\n\t\t{20F} as string,\n\t\t{20R} as string,\n\t\t{20H} as string,\n\t\t{40F} as string,\n\t\t{40R} as string,\n\t\t{40HC} as string,\n\t\t{45F} as string,\n\t\tGEN as string,\n\t\t{Actual Cartage Delivery} as string,\n\t\t{Total Unrecognised Income(REV+WIP)} as string,\n\t\t{Consignor City} as string,\n\t\t{Consignor State} as string,\n\t\t{Consignor Postcode} as string,\n\t\t{Consignee City} as string,\n\t\t{Consignee State} as string,\n\t\t{Consignee Postcode} as string,\n\t\t{Consol ATD} as string,\n\t\t{Consol ATA} as string,\n\t\t{Job Revenue Recognition Date} as string,\n\t\tDirection as string,\n\t\t{Local Client AR Settlement Group Code} as string,\n\t\t{Local Client AR Settlement Group Name} as string,\n\t\t{Overseas Agent Code} as string,\n\t\t{Overseas Agent Name} as string,\n\t\t{Job Overseas Agent AR Settlement Group Code} as string,\n\t\t{Job Overseas Agent AR Settlement Group Name} as string,\n\t\t{Total Unrecognised Expense (CST+ACR)} as string,\n\t\t{Total Accrual (Recognised+Unrecognised)} as string,\n\t\t{Total Cost (Recognised+Unrecognised)} as string,\n\t\t{Total Expense (Recognised+Unrecognised CST+ACR)} as string,\n\t\t{Total Income (Recognised+Unrecognised REV+WIP)} as string,\n\t\t{Total Revenue (Recognised+Unrecognised)} as string,\n\t\t{Total WIP (Recognised+Unrecognised)} as string,\n\t\t{House Bill Type} as string,\n\t\t{Unrecognised Cost} as string,\n\t\tColumn6 as string,\n\t\tColumn7 as string,\n\t\tColumn8 as string,\n\t\t{Shippers Reference} as string,\n\t\tColumn9 as string,\n\t\t{Service Level Code} as string,\n\t\tColumn10 as string,\n\t\t{Unrecognised WIP} as string,\n\t\tColumn11 as string,\n\t\t{Unrecognised Accrual} as string,\n\t\tColumn12 as string,\n\t\t{Unrecognised Revenue} as string\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\trecreate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> Sinkdest_rubicon_dev_canyonlands"
+						}
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
