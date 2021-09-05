@@ -3,7 +3,17 @@
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
-			"sources": []
+			"sources": [
+				{
+					"name": "src_rubicon_dev_canyonlands",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~>  src_rubicon_dev_canyonlands",
+					"dataset": {
+						"referenceName": "src_rubicon_dev_canyonlands",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared src_rubicon_dev_canyonlands = let\r\n  AdfDoc = Sql.Database(\"rubicon-dev.database.windows.net\", \"canyonlands\", [CreateNavigationProperties = false]),\r\n  InputTable = AdfDoc{[Schema = \"raw\", Item = \"transport\"]}[Data]\r\nin\r\n  InputTable;\r\nshared UserQuery = let\r\n  Source = src_rubicon_dev_canyonlands,\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"Origin ETD\", type datetime}}),\r\n  #\"Removed other columns\" = Table.SelectColumns(#\"Changed column type\", {\"Shipment ID\", \"Trans\", \"Customs Info\", \"Mode\", \"Origin\", \"Origin Ctry\", \"Destination\", \"Destination Ctry\", \"Consignor Code\", \"Consignor Name\", \"Consignee Code\", \"Consignee Name\", \"House Ref\", \"Incoterm\", \"Additional Terms\", \"PPD/CCX\", \"Goods Description\", \"Origin ETD\", \"Destination ETA\"})\r\nin\r\n  #\"Removed other columns\";\r\n"
 		}
 	}
 }
