@@ -56,7 +56,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dest_rubicon_dev_canyonlands",
+						"referenceName": "dest_rubicon_dev_canyon",
 						"type": "DatasetReference",
 						"parameters": {
 							"DestSchemaName": {

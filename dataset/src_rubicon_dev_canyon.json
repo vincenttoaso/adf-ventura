@@ -1,5 +1,5 @@
 {
-	"name": "src_rubicon_dev_canyonlands",
+	"name": "src_rubicon_dev_canyon",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "optum_azure_rubicon_dev_canyonlands",
