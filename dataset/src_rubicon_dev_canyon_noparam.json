@@ -1,0 +1,481 @@
+{
+	"name": "src_rubicon_dev_canyon_noparam",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "optum_azure_rubicon_dev_canyonlands",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Shipment ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Trans",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Customs Info",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Mode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Origin",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Origin Ctry",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination Ctry",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "House Ref",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Incoterm",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Additional Terms",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PPD/CCX",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Goods Description",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Origin ETD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination ETA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Weight",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Volume",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Loading Metres",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Chargeable",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Inner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Outer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UQ5",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Added",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Controlling Customer Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Controlling Customer Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Transport Job",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Brokerage Job",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Is Master/ Lead",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Import Broker Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Import Broker Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Export Broker Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Export Broker Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Branch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Dept",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Local Client Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Local Client Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Sales Rep",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Operator",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Opened",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recognised Revenue",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recognised WIP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Recognised Income (REV+WIP)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recognised Cost",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recognised Accrual",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Recognised Expense (CST+ACR)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Profit",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consol ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "First Load",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Last Discharge",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ETD First Load",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ETA Last Discharge",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Master BL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vessel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Flight/Voyage",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Load",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Discharge",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ETD Load",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ETA Discharge",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sending Agent Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sending Agent Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Receiving Agent",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Receiving Agent Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Carrier Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Carrier Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TEU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Container Count",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "20F",
+				"type": "nvarchar"
+			},
+			{
+				"name": "20R",
+				"type": "nvarchar"
+			},
+			{
+				"name": "20H",
+				"type": "nvarchar"
+			},
+			{
+				"name": "40F",
+				"type": "nvarchar"
+			},
+			{
+				"name": "40R",
+				"type": "nvarchar"
+			},
+			{
+				"name": "40HC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "45F",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GEN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Actual Cartage Delivery",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Unrecognised Income(REV+WIP)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignor Postcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consignee Postcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consol ATD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Consol ATA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Revenue Recognition Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Direction",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Overseas Agent Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Overseas Agent Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Unrecognised Expense (CST+ACR)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Accrual (Recognised+Unrecognised)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Cost (Recognised+Unrecognised)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Expense (Recognised+Unrecognised CST+ACR)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Income (Recognised+Unrecognised REV+WIP)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Revenue (Recognised+Unrecognised)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total WIP (Recognised+Unrecognised)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "House Bill Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Unrecognised Cost",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Service Level Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Unrecognised WIP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Unrecognised Accrual",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Unrecognised Revenue",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Added Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Origin ETD Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination ETA Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Status 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Arrival Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Departure Status",
+				"type": "nvarchar"
+			}
+		]
+	}
+}
